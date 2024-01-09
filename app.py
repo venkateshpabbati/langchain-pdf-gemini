@@ -25,10 +25,11 @@ st.subheader('🤖 Generative Q&A with LangChain & Gemini')
             
 # Sidebar section to input the Google API key
 with st.sidebar:
-    # Check if the Google API key is set in the environment variables
-    if 'GOOGLE_API_KEY' in os.environ:
+    if 'GOOGLE_API_KEY' in st.secrets:
+        st.success('API key already provided!', icon='✅')
+        api_key = st.secrets['GOOGLE_API_KEY']
+    else:
         api_key = st.text_input('Enter Google API Key:', type='password')
-        # Validate the format of the API key
         if not (api_key.startswith('AI')):
             st.warning('Please enter your API Key!', icon='⚠️')
         else:
