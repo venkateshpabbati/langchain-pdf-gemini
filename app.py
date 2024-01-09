@@ -39,7 +39,7 @@ with st.sidebar:
     # Display external links in the sidebar
     "[Get a Google Gemini API key](https://ai.google.dev/)"
     "[View the source code](https://github.com/wms31/langchain-pdf-gemini)"
-    "[Check out the blog post!](https://letsaiml.com/create-your-own-ai-chat-using-gemini-for-free/)"
+    "[Check out the blog post!](https://letsaiml.com/revolutionize-qa-with-langchain-and-rag-simplified/)"
 
 # Input section to upload a source document and provide a query
 source_doc = st.file_uploader("Upload source document", type="pdf", label_visibility="collapsed")
